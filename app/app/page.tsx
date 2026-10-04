@@ -3,35 +3,78 @@ export default function HomePage() {
     <main
       style={{
         minHeight: "100vh",
-        background: "#0f0f23",
+        background:
+          "linear-gradient(180deg,#05071f 0%,#0c1037 100%)",
         color: "white",
-        padding: "20px",
+        padding: "24px",
+        fontFamily: "Arial, sans-serif",
       }}
     >
-      <h1 style={{ color: "#a855f7" }}>🟣 PurpleDelta</h1>
+      <h1 style={{ fontSize: "38px", margin: 0, color: "#a855f7" }}>
+        🟣 PurpleDelta
+      </h1>
+
+      <p style={{ color: "#a9adff", marginTop: "6px" }}>
+        Formula 1 Dashboard
+      </p>
 
       <div
         style={{
-          background: "#1a1a3a",
-          borderRadius: "16px",
-          padding: "16px",
+          background: "#131942",
+          border: "1px solid #2b347a",
+          borderRadius: "20px",
+          padding: "20px",
+          marginTop: "24px",
+        }}
+      >
+        <div
+          style={{
+            color: "#a9adff",
+            fontSize: "13px",
+            fontWeight: "bold",
+          }}
+        >
+          ROUND 16
+        </div>
+
+        <h2 style={{ margin: "8px 0 6px" }}>
+          🇦🇿 Azerbaijan Grand Prix
+        </h2>
+
+        <div style={{ color: "#c7cbff" }}>
+          September 24–26
+        </div>
+      </div>
+
+      <section
+        style={{
+          background: "#131942",
+          border: "1px solid #2b347a",
+          borderRadius: "20px",
+          padding: "20px",
           marginTop: "20px",
         }}
       >
-        <h2>R16</h2>
-        <h3>🇦🇿 Azerbaijan Grand Prix</h3>
-        <p>9월 24일 ~ 26일</p>
-      </div>
+        <h2 style={{ marginTop: 0 }}>Latest News</h2>
 
-      <h2 style={{ marginTop: "30px" }}>최신 뉴스</h2>
-
-      <ul>
-        <li>Antonelli wins Spanish GP</li>
-        <li>Mercedes extends championship lead</li>
-        <li>Azerbaijan GP Preview</li>
-        <li>Verstappen reacts to title battle</li>
-        <li>Latest paddock updates</li>
-      </ul>
+        {[
+          "Antonelli wins Spanish GP",
+          "Mercedes extends championship lead",
+          "Azerbaijan GP Preview",
+          "Verstappen reacts to title battle",
+          "Latest paddock updates",
+        ].map((news) => (
+          <div
+            key={news}
+            style={{
+              padding: "12px 0",
+              borderBottom: "1px solid #2b347a",
+            }}
+          >
+            {news}
+          </div>
+        ))}
+      </section>
     </main>
   );
 }
